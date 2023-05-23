@@ -1,0 +1,31 @@
+﻿<#@ assembly name="$(SolutionDir)\Magna.CSL.Context\bin\Debug\Magna.CSL.Context.dll" #>
+
+<#
+var model = typeof(Magna.CSL.Context.DAL.MagnaPullSystemEntities);
+var baseMethods = model.BaseType.GetMethods();
+
+var fileNamespace = System.Runtime.Remoting.Messaging.CallContext.LogicalGetData("NamespaceHint");
+
+System.Collections.Generic.List<string> functions = new System.Collections.Generic.List<string>();
+
+var methods = model.GetMethods();
+foreach(var method in methods)
+	functions.Add(method.Name);
+
+foreach(var baseMethod in baseMethods)
+	functions.Remove(baseMethod.Name);
+#>
+
+namespace <#=fileNamespace#>
+{
+	internal class Procedimientos
+	{
+	<# 
+	foreach(var functionName in functions)
+	{
+	#>
+	public const string <#= functionName #> = "<#= functionName #>";
+	<#}#>
+
+	}
+}

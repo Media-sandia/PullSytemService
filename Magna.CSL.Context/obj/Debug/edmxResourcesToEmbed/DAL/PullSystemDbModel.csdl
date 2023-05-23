@@ -1,0 +1,1553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MagnaPullSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="Funcion_SepararCadena_Result">
+    <Property Name="Separados" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <EntityContainer Name="MagnaPullSystemEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Funcion_SepararCadena" IsComposable="true" ReturnType="Collection(MagnaPullSystemModel.Funcion_SepararCadena_Result)">
+      <Parameter Name="String" Mode="In" Type="String" />
+      <Parameter Name="Separator" Mode="In" Type="String" />
+      <Parameter Name="Count" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Configuraciones_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Configuraciones_Consulta_renglon_Result)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreMostrar" Mode="In" Type="String" />
+      <Parameter Name="Valor" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Tipos" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Configuraciones_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Configuraciones_Insertar_renglon" ReturnType="Collection(String)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreMostrar" Mode="In" Type="String" />
+      <Parameter Name="Valor" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="Ocultar" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Configuraciones_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreMostrar" Mode="In" Type="String" />
+      <Parameter Name="Valor" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="Ocultar" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Configuraciones_Modificar_Valor" ReturnType="Collection(Int32)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Valor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Correos_Consulta_renglon_Result)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreMostrar" Mode="In" Type="String" />
+      <Parameter Name="Asunto" Mode="In" Type="String" />
+      <Parameter Name="Cuerpo" Mode="In" Type="String" />
+      <Parameter Name="ID_Destinatarios" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Etiquetas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Correos_Etiquetas_Consulta_renglon_Result)">
+      <Parameter Name="Etiqueta" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="Texto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Etiquetas_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Etiqueta" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Etiquetas_Insertar_renglon" ReturnType="Collection(String)">
+      <Parameter Name="Etiqueta" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="Texto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Etiquetas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Etiqueta" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="Texto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Correos_Grupos_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="ValidarJerarquia" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="ValidarJerarquia" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Usuarios_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Correos_Grupos_Usuarios_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Correos_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Usuarios_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Correos_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Usuarios_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Correos_Grupos_Usuarios_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Correos_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Grupos_Usuarios_Insertar_Usuarios">
+      <Parameter Name="ID_Catalogo_Correos_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="IDs_Catalogo_Usuarios" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Insertar_renglon" ReturnType="Collection(String)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreMostrar" Mode="In" Type="String" />
+      <Parameter Name="Asunto" Mode="In" Type="String" />
+      <Parameter Name="Cuerpo" Mode="In" Type="String" />
+      <Parameter Name="ID_Destinatarios" Mode="In" Type="String" />
+      <Parameter Name="DestinatarioSistema" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Correos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreMostrar" Mode="In" Type="String" />
+      <Parameter Name="Asunto" Mode="In" Type="String" />
+      <Parameter Name="Cuerpo" Mode="In" Type="String" />
+      <Parameter Name="ID_Destinatarios" Mode="In" Type="String" />
+      <Parameter Name="DestinatarioSistema" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Estatus_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Estatus_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="Orden" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Estatus_Eliminar_renglon">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Estatus_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="Orden" Mode="In" Type="Int32" />
+      <Parameter Name="Color" Mode="In" Type="String" />
+      <Parameter Name="Vigente" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Estatus_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="Orden" Mode="In" Type="Int32" />
+      <Parameter Name="Color" Mode="In" Type="String" />
+      <Parameter Name="Vigente" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Grupos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Grupos_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Grupos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Grupos_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Grupos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Idiomas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Idiomas_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreGlobalizado" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Idiomas_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Idiomas_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreGlobalizado" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="Predeterminado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Idiomas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="NombreGlobalizado" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="Predeterminado" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Objetos_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Parent" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre_Interno" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Objetos_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="href" Mode="In" Type="String" />
+      <Parameter Name="Orden" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Objetos_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Parent" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre_Interno" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Objetos_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="href" Mode="In" Type="String" />
+      <Parameter Name="Icono" Mode="In" Type="String" />
+      <Parameter Name="Orden" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Parent" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre_Interno" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Objetos_Tipos" Mode="In" Type="Int64" />
+      <Parameter Name="href" Mode="In" Type="String" />
+      <Parameter Name="Icono" Mode="In" Type="String" />
+      <Parameter Name="Orden" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Tipos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Objetos_Tipos_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Parent" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Namespace" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Tipos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Tipos_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Parent" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Namespace" Mode="In" Type="String" />
+      <Parameter Name="ElementoMenu" Mode="In" Type="Boolean" />
+      <Parameter Name="ControlCRUD" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Objetos_Tipos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Parent" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Namespace" Mode="In" Type="String" />
+      <Parameter Name="ElementoMenu" Mode="In" Type="Boolean" />
+      <Parameter Name="ControlCRUD" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Plantas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Plantas_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Plantas_Eliminar_renglon">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Plantas_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Logo" Mode="In" Type="Binary" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Plantas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Logo" Mode="In" Type="Binary" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Sistemas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Sistemas_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Sistemas_Eliminar_renglon">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Sistemas_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Sistemas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Tipos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Tipos_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Tipos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Tipos_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Tipos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Cambiar_Contraseña">
+      <Parameter Name="TokenRecuperacion" Mode="In" Type="String" />
+      <Parameter Name="Contraseña" Mode="In" Type="String" />
+      <Parameter Name="ConfirmacionContraseña" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Cambio_Contraseña" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ContraseñaAnterior" Mode="In" Type="String" />
+      <Parameter Name="Contraseña" Mode="In" Type="String" />
+      <Parameter Name="ConfirmacionContraseña" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Consulta_CambioContraseña" ReturnType="Collection(Boolean)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Consulta_Detalle" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Usuarios_Consulta_Detalle_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Usuarios_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="CorreoElectronico" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Consulta_SinFoto" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Usuarios_Consulta_SinFoto_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="CorreoElectronico" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Consulta_Token" ReturnType="Collection(Boolean)">
+      <Parameter Name="TokenRecuperacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Eliminar_renglon">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="CorreoElectronico" Mode="In" Type="String" />
+      <Parameter Name="Contraseña" Mode="In" Type="Binary" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="UrlPerfil" Mode="In" Type="Binary" />
+      <Parameter Name="TokenRecuperacion" Mode="In" Type="String" />
+      <Parameter Name="CambiarContraseña" Mode="In" Type="Boolean" />
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="NoNomina" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Login" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Usuarios_Login_Result)">
+      <Parameter Name="UsuarioCorreoElectronico" Mode="In" Type="String" />
+      <Parameter Name="Contraseña" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Modificar_Contraseña">
+      <Parameter Name="IdUsuario" Mode="In" Type="Int64" />
+      <Parameter Name="Contraseña" Mode="In" Type="String" />
+      <Parameter Name="ConfirmacionContraseña" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="CorreoElectronico" Mode="In" Type="String" />
+      <Parameter Name="Contraseña" Mode="In" Type="Binary" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="UrlPerfil" Mode="In" Type="Binary" />
+      <Parameter Name="TokenRecuperacion" Mode="In" Type="String" />
+      <Parameter Name="CambiarContraseña" Mode="In" Type="Boolean" />
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="NoNomina" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Recuperar_Contraseña">
+      <Parameter Name="CorreoElectronico" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Usuarios_Reiniciar_Contraseña" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ContraseñaNueva" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Versiones_Consulta_renglon_Result)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="FechaPublicacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Versiones_Insertar_renglon_Result)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="FechaPublicacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Mejoras_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Versiones_Mejoras_Consulta_renglon_Result)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Numero" Mode="In" Type="Decimal" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Mejoras_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Numero" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Mejoras_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Versiones_Mejoras_Insertar_renglon_Result)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Numero" Mode="In" Type="Decimal" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Mejoras_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Numero" Mode="In" Type="Decimal" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Versiones_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="Version" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="FechaPublicacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Adjuntos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Correos_Adjuntos_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="NombreArchivo" Mode="In" Type="String" />
+      <Parameter Name="RutaArchivo" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Adjuntos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Adjuntos_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Correos_Adjuntos_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="NombreArchivo" Mode="In" Type="String" />
+      <Parameter Name="RutaArchivo" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Adjuntos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="NombreArchivo" Mode="In" Type="String" />
+      <Parameter Name="RutaArchivo" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Bitacora_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Correos_Bitacora_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+      <Parameter Name="MensajeDevuelto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Bitacora_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Bitacora_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Correos_Bitacora_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+      <Parameter Name="MensajeDevuelto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Bitacora_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Correos" Mode="In" Type="Int64" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+      <Parameter Name="MensajeDevuelto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Correos_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="De" Mode="In" Type="String" />
+      <Parameter Name="Destinatarios" Mode="In" Type="String" />
+      <Parameter Name="Asunto" Mode="In" Type="String" />
+      <Parameter Name="Cuerpo" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Correos_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="De" Mode="In" Type="String" />
+      <Parameter Name="Destinatarios" Mode="In" Type="String" />
+      <Parameter Name="DestinatariosCC" Mode="In" Type="String" />
+      <Parameter Name="DestinatariosCCO" Mode="In" Type="String" />
+      <Parameter Name="DestinatariosRespuesta" Mode="In" Type="String" />
+      <Parameter Name="Asunto" Mode="In" Type="String" />
+      <Parameter Name="Cuerpo" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+      <Parameter Name="Enviado" Mode="In" Type="Boolean" />
+      <Parameter Name="FechaEnvio" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Correos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="De" Mode="In" Type="String" />
+      <Parameter Name="Destinatarios" Mode="In" Type="String" />
+      <Parameter Name="DestinatariosCC" Mode="In" Type="String" />
+      <Parameter Name="DestinatariosCCO" Mode="In" Type="String" />
+      <Parameter Name="DestinatariosRespuesta" Mode="In" Type="String" />
+      <Parameter Name="Asunto" Mode="In" Type="String" />
+      <Parameter Name="Cuerpo" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+      <Parameter Name="Enviado" Mode="In" Type="Boolean" />
+      <Parameter Name="FechaEnvio" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_ActualizarPermisos" ReturnType="Collection(Decimal)">
+      <Parameter Name="Xml" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Objetos_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Objetos" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Objetos" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Objetos_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Objetos" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Seleccionar" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+      <Parameter Name="href" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Seleccionar_Permiso" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_Permiso_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+      <Parameter Name="Href" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Seleccionar_PermisosPorUsuario" ReturnType="Collection(Boolean)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+      <Parameter Name="href" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Seleccionar_PorGrupo" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_PorGrupo_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Objetos_Seleccionar_PorUsuario" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_PorUsuario_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Usuarios_ActualizarPermisos" ReturnType="Collection(Decimal)">
+      <Parameter Name="Xml" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Usuarios_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Usuarios_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Usuarios_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Usuarios_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Usuarios_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Grupos_Usuarios_Seleccionar_PorGrupo" ReturnType="Collection(MagnaPullSystemModel.Relacion_Grupos_Usuarios_Seleccionar_PorGrupo_Result)">
+      <Parameter Name="ID_Catalogo_Grupos" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Objetos_Idiomas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Objetos_Idiomas_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Objetos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Idiomas" Mode="In" Type="Int64" />
+      <Parameter Name="TextoMostrar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Objetos_Idiomas_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Objetos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Idiomas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Objetos_Idiomas_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Objetos_Idiomas_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Objetos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Idiomas" Mode="In" Type="Int64" />
+      <Parameter Name="TextoMostrar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Objetos_Idiomas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Objetos" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Idiomas" Mode="In" Type="Int64" />
+      <Parameter Name="TextoMostrar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Lineas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Lineas_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Lineas_Consulta_simple" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Lineas_Consulta_simple_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Lineas_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Lineas_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Lineas_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Lineas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Pantallas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Pantallas_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="DireccionIP" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Pantallas_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Pantallas_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Pantallas_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="DireccionIP" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Pantallas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="DireccionIP" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Clasificaciones_Consulta_General" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Partes_Clasificaciones_Consulta_General_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Orden" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Clasificaciones_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Partes_Clasificaciones_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Orden" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Clasificaciones_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Clasificaciones_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Orden" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Clasificaciones_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Orden" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Consulta_Discriminada" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Partes_Consulta_Discriminada_Result)">
+      <Parameter Name="PalabraConfiguracionDiscriminatoria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Consulta_PorClasificacion" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Partes_Consulta_PorClasificacion_Result)">
+      <Parameter Name="PalabraConfiguracionDiscriminatoria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Partes_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="NoParte" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Partes_Clasificaciones" Mode="In" Type="Int64" />
+      <Parameter Name="Maximo" Mode="In" Type="Decimal" />
+      <Parameter Name="Minimo" Mode="In" Type="Decimal" />
+      <Parameter Name="StockActual" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="NoParte" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Partes_Clasificaciones" Mode="In" Type="Int64" />
+      <Parameter Name="Maximo" Mode="In" Type="Decimal" />
+      <Parameter Name="Minimo" Mode="In" Type="Decimal" />
+      <Parameter Name="StockActual" Mode="In" Type="Decimal" />
+      <Parameter Name="Imagen" Mode="In" Type="Binary" />
+      <Parameter Name="Demanda" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Partes_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="NoParte" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="ID_Catalogo_Partes_Clasificaciones" Mode="In" Type="Int64" />
+      <Parameter Name="Maximo" Mode="In" Type="Decimal" />
+      <Parameter Name="Minimo" Mode="In" Type="Decimal" />
+      <Parameter Name="StockActual" Mode="In" Type="Decimal" />
+      <Parameter Name="Imagen" Mode="In" Type="Binary" />
+      <Parameter Name="Demanda" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Periodos_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Catalogo_Periodos_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Periodos_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Periodos_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Catalogo_Periodos_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Excepciones_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Excepciones_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Momento" Mode="In" Type="DateTime" />
+      <Parameter Name="Identificador" Mode="In" Type="String" />
+      <Parameter Name="IdSesion" Mode="In" Type="String" />
+      <Parameter Name="Mensaje" Mode="In" Type="String" />
+      <Parameter Name="PilaLlamadas" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Excepciones_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Momento" Mode="In" Type="DateTime" />
+      <Parameter Name="Identificador" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Excepciones_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Excepciones_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Momento" Mode="In" Type="DateTime" />
+      <Parameter Name="Identificador" Mode="In" Type="String" />
+      <Parameter Name="IdSesion" Mode="In" Type="String" />
+      <Parameter Name="Mensaje" Mode="In" Type="String" />
+      <Parameter Name="PilaLlamadas" Mode="In" Type="String" />
+      <Parameter Name="DXCallbackErrorMessage" Mode="In" Type="String" />
+      <Parameter Name="aspxErrorPath" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Excepciones_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Sistemas" Mode="In" Type="Int64" />
+      <Parameter Name="Momento" Mode="In" Type="DateTime" />
+      <Parameter Name="Identificador" Mode="In" Type="String" />
+      <Parameter Name="IdSesion" Mode="In" Type="String" />
+      <Parameter Name="Mensaje" Mode="In" Type="String" />
+      <Parameter Name="PilaLlamadas" Mode="In" Type="String" />
+      <Parameter Name="DXCallbackErrorMessage" Mode="In" Type="String" />
+      <Parameter Name="aspxErrorPath" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Embarques_Actualizar" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="NoEmbarque" Mode="In" Type="String" />
+      <Parameter Name="Surtido" Mode="In" Type="Boolean" />
+      <Parameter Name="MomentoTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Embarques_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Proceso_Embarques_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="NoEmbarque" Mode="In" Type="String" />
+      <Parameter Name="MomentoInicio" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Embarques_Consulta_Simple" ReturnType="Collection(MagnaPullSystemModel.Proceso_Embarques_Consulta_Simple_Result)">
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Embarques_Consulta_TopEstado" ReturnType="Collection(MagnaPullSystemModel.Proceso_Embarques_Consulta_TopEstado_Result)">
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Embarques_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Embarques_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="NoEmbarque" Mode="In" Type="String" />
+      <Parameter Name="Surtido" Mode="In" Type="Boolean" />
+      <Parameter Name="MomentoInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="MomentoTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Embarques_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="NoEmbarque" Mode="In" Type="String" />
+      <Parameter Name="Surtido" Mode="In" Type="Boolean" />
+      <Parameter Name="MomentoTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Generar_Diagramas" ReturnType="Collection(MagnaPullSystemModel.Proceso_Generar_Diagramas_Result)">
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Importar">
+      <Parameter Name="Xml" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Importar_Verificar" ReturnType="Collection(MagnaPullSystemModel.Proceso_Importar_Verificar_Result)">
+      <Parameter Name="Xml" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Produccion_Actualizar" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="Leveling" Mode="In" Type="String" />
+      <Parameter Name="OrdenProduccion" Mode="In" Type="String" />
+      <Parameter Name="Lote" Mode="In" Type="String" />
+      <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="MomentoTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Produccion_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Proceso_Produccion_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="OrdenProduccion" Mode="In" Type="String" />
+      <Parameter Name="Lote" Mode="In" Type="String" />
+      <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="MomentoInicio" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Produccion_Consulta_Simple" ReturnType="Collection(MagnaPullSystemModel.Proceso_Produccion_Consulta_Simple_Result)">
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Produccion_Consulta_TopFechaTerminoNull" ReturnType="Collection(MagnaPullSystemModel.Proceso_Produccion_Consulta_TopFechaTerminoNull_Result)">
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Produccion_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Produccion_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="Leveling" Mode="In" Type="String" />
+      <Parameter Name="OrdenProduccion" Mode="In" Type="String" />
+      <Parameter Name="Lote" Mode="In" Type="String" />
+      <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="MomentoInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="MomentoTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Produccion_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+      <Parameter Name="Leveling" Mode="In" Type="String" />
+      <Parameter Name="OrdenProduccion" Mode="In" Type="String" />
+      <Parameter Name="Lote" Mode="In" Type="String" />
+      <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+      <Parameter Name="ID_Catalogo_Estatus" Mode="In" Type="Int64" />
+      <Parameter Name="MomentoInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="MomentoTermino" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Lineas_Partes_Consulta_Detalle" ReturnType="Collection(MagnaPullSystemModel.Relacion_Lineas_Partes_Consulta_Detalle_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Lineas_Partes_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Lineas_Partes_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Lineas_Partes_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Lineas_Partes_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Lineas_Partes_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Pantallas_Lineas_Consulta_Partes" ReturnType="Collection(MagnaPullSystemModel.Relacion_Pantallas_Lineas_Consulta_Partes_Result)">
+      <Parameter Name="DireccionIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Pantallas_Lineas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Pantallas_Lineas_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Pantallas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="Orden" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Pantallas_Lineas_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Pantallas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Pantallas_Lineas_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Pantallas_Lineas_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Pantallas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="Orden" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Pantallas_Lineas_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Pantallas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="Orden" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Consulta_General" ReturnType="Collection(MagnaPullSystemModel.Relacion_Partes_Orden_Consulta_General_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Padre" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Consulta_Recursiva" ReturnType="Collection(MagnaPullSystemModel.Relacion_Partes_Orden_Consulta_Recursiva_Result)">
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Partes_Orden_Consulta_renglon_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Padre" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Insertar_renglon" ReturnType="Collection(Int64)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Padre" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Modificar_Recursiva" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Relacion" Mode="In" Type="Int64" />
+      <Parameter Name="NoParte" Mode="In" Type="String" />
+      <Parameter Name="Maximo" Mode="In" Type="Decimal" />
+      <Parameter Name="Minimo" Mode="In" Type="Decimal" />
+      <Parameter Name="StockActual" Mode="In" Type="Decimal" />
+      <Parameter Name="NombreClasificacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Modificar_Recursivo" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="Maximo" Mode="In" Type="Decimal" />
+      <Parameter Name="Minimo" Mode="In" Type="Decimal" />
+      <Parameter Name="StockActual" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Partes_Orden_Modificar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Padre" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Partes" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Usuarios_Lineas_Consulta_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Usuarios_Lineas_Consulta_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Usuarios_Lineas_Eliminar_renglon" ReturnType="Collection(Int32)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Relacion_Usuarios_Lineas_Insertar_renglon" ReturnType="Collection(MagnaPullSystemModel.Relacion_Usuarios_Lineas_Insertar_renglon_Result)">
+      <Parameter Name="ID_Catalogo_Plantas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Lineas" Mode="In" Type="Int64" />
+      <Parameter Name="ID_Catalogo_Usuarios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Actualizar_Partes_Api" ReturnType="Collection(MagnaPullSystemModel.Proceso_Actualizar_Partes_Api_Result)">
+      <Parameter Name="xml" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Proceso_Consultar_Api" ReturnType="Collection(MagnaPullSystemModel.Proceso_Consultar_Api_Result)" />
+  </EntityContainer>
+  <ComplexType Name="Catalogo_Configuraciones_Consulta_renglon_Result">
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NombreMostrar" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Valor" Nullable="false" MaxLength="150" />
+    <Property Type="Int64" Name="ID_Catalogo_Tipos" Nullable="false" />
+    <Property Type="Boolean" Name="Ocultar" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Correos_Consulta_renglon_Result">
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NombreMostrar" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Asunto" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Cuerpo" Nullable="false" />
+    <Property Type="String" Name="ID_Destinatarios" Nullable="false" MaxLength="15" />
+    <Property Type="Boolean" Name="DestinatarioSistema" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Correos_Etiquetas_Consulta_renglon_Result">
+    <Property Type="String" Name="Etiqueta" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Texto" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Correos_Grupos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="150" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="Boolean" Name="ValidarJerarquia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Correos_Grupos_Usuarios_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Correos_Grupos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Usuarios" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Correos_Grupos_Usuarios_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Correos_Grupos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Usuarios" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Estatus_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ID_Catalogo_Tipos" Nullable="false" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+    <Property Type="String" Name="Color" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Vigente" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Grupos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Idiomas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NombreGlobalizado" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="Boolean" Name="Predeterminado" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Objetos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Parent" Nullable="false" />
+    <Property Type="String" Name="Nombre_Interno" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos_Tipos" Nullable="false" />
+    <Property Type="String" Name="href" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Icono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Objetos_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Objetos_Tipos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Parent" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Namespace" Nullable="false" MaxLength="150" />
+    <Property Type="Boolean" Name="ElementoMenu" Nullable="false" />
+    <Property Type="Boolean" Name="ControlCRUD" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Plantas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Binary" Name="Logo" Nullable="true" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Sistemas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Tipos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Usuarios_Consulta_Detalle_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CorreoElectronico" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="Binary" Name="UrlPerfil" Nullable="true" />
+    <Property Type="Boolean" Name="CambiarContraseña" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="String" Name="NoNomina" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="String" Name="Nombre_Catalogo_Lineas" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Usuarios_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CorreoElectronico" Nullable="false" MaxLength="50" />
+    <Property Type="Binary" Name="Contraseña" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="Binary" Name="UrlPerfil" Nullable="true" />
+    <Property Type="String" Name="TokenRecuperacion" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="CambiarContraseña" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="String" Name="NoNomina" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Usuarios_Consulta_SinFoto_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CorreoElectronico" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="Binary" Name="UrlPerfil" Nullable="true" />
+    <Property Type="Boolean" Name="CambiarContraseña" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="String" Name="NoNomina" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="String" Name="Nombre_Catalogo_Lineas" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Usuarios_Login_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CorreoElectronico" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Versiones_Consulta_renglon_Result">
+    <Property Type="String" Name="Version" Nullable="false" MaxLength="10" />
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="DateTime" Name="FechaPublicacion" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Versiones_Insertar_renglon_Result">
+    <Property Type="String" Name="Version" Nullable="false" MaxLength="10" />
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Versiones_Mejoras_Consulta_renglon_Result">
+    <Property Type="String" Name="Version" Nullable="false" MaxLength="10" />
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Decimal" Name="Numero" Nullable="false" Precision="3" Scale="0" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Versiones_Mejoras_Insertar_renglon_Result">
+    <Property Type="String" Name="Version" Nullable="false" MaxLength="10" />
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Decimal" Name="Numero" Nullable="false" Precision="3" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="Correos_Adjuntos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Correos" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NombreArchivo" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RutaArchivo" Nullable="false" MaxLength="2000" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Correos_Adjuntos_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Correos" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Correos_Bitacora_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Correos" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="String" Name="MensajeDevuelto" Nullable="false" MaxLength="2000" />
+  </ComplexType>
+  <ComplexType Name="Correos_Bitacora_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Correos" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Correos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="De" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Destinatarios" Nullable="false" MaxLength="2000" />
+    <Property Type="String" Name="DestinatariosCC" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="DestinatariosCCO" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="DestinatariosRespuesta" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Asunto" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Cuerpo" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Enviado" Nullable="false" />
+    <Property Type="DateTime" Name="FechaEnvio" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Correos_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Objetos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Grupos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Objetos_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Grupos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Objetos_Seleccionar_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Grupos" Nullable="true" />
+    <Property Type="String" Name="Nombre_Catalogo_Grupos" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Permitido" Nullable="true" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Parent_Catalogo_Objetos" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Icono" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario_Result">
+    <Property Type="Boolean" Name="PermiteAcceso" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Parent" Nullable="false" />
+    <Property Type="String" Name="Nombre_Interno" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Nombre_Catalogo_Objetos_Tipos" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Namespace_Catalogo_Objetos_Tipos" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Objetos_Seleccionar_Permiso_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Parent_Catalogo_Objetos" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="href" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Nombre_Interno" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos_Tipos" Nullable="false" />
+    <Property Type="String" Name="Nombre_Catalogo_Objetos_Tipos" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Namespace_Catalogo_Objetos_Tipos" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Icono" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Nombre_Catalogo_Objetos" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Objetos_Seleccionar_PorGrupo_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Grupos" Nullable="true" />
+    <Property Type="String" Name="Nombre_Catalogo_Grupos" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Permitido" Nullable="true" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Parent_Catalogo_Objetos" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Icono" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Objetos_Seleccionar_PorUsuario_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Parent_Catalogo_Objetos" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="href" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Nombre_Interno" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos_Tipos" Nullable="false" />
+    <Property Type="String" Name="Nombre_Catalogo_Objetos_Tipos" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Namespace_Catalogo_Objetos_Tipos" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Icono" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Nombre_Catalogo_Objetos" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Orden" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Usuarios_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Grupos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Usuarios" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Usuarios_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Grupos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Usuarios" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Grupos_Usuarios_Seleccionar_PorGrupo_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Grupos" Nullable="true" />
+    <Property Type="String" Name="Nombre_Catalogo_Grupos" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="Permitido" Nullable="true" />
+    <Property Type="Int64" Name="ID_Catalogo_Usuarios" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Objetos_Idiomas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Idiomas" Nullable="false" />
+    <Property Type="String" Name="TextoMostrar" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Objetos_Idiomas_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Objetos" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Idiomas" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Lineas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Lineas_Consulta_simple_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Lineas_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Pantallas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DireccionIP" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Pantallas_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Partes_Clasificaciones_Consulta_General_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="500" />
+    <Property Type="Decimal" Name="Orden" Nullable="false" Precision="4" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes_Clasificaciones" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Partes_Clasificaciones_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="500" />
+    <Property Type="Decimal" Name="Orden" Nullable="false" Precision="4" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Partes_Consulta_Discriminada_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes_Clasificaciones" Nullable="false" />
+    <Property Type="Decimal" Name="Maximo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockActual" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Partes_Consulta_PorClasificacion_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes_Clasificaciones" Nullable="false" />
+    <Property Type="Decimal" Name="Maximo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockActual" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Partes_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes_Clasificaciones" Nullable="false" />
+    <Property Type="Decimal" Name="Maximo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockActual" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="Imagen" Nullable="true" />
+    <Property Type="Decimal" Name="Demanda" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Catalogo_Periodos_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="FechaInicio" Nullable="false" />
+    <Property Type="DateTime" Name="FechaTermino" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Excepciones_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="DateTime" Name="Momento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Identificador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="IdSesion" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Mensaje" Nullable="false" />
+    <Property Type="String" Name="PilaLlamadas" Nullable="false" />
+    <Property Type="String" Name="DXCallbackErrorMessage" Nullable="true" />
+    <Property Type="String" Name="aspxErrorPath" Nullable="true" />
+    <Property Type="Int64" Name="Usuario" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Excepciones_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Sistemas" Nullable="false" />
+    <Property Type="DateTime" Name="Momento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Identificador" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Embarques_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="NoEmbarque" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="Surtido" Nullable="false" />
+    <Property Type="DateTime" Name="MomentoInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="MomentoTermino" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Embarques_Consulta_Simple_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="NoEmbarque" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="Surtido" Nullable="false" />
+    <Property Type="DateTime" Name="MomentoInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="MomentoTermino" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Embarques_Consulta_TopEstado_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="NoEmbarque" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="Surtido" Nullable="false" />
+    <Property Type="DateTime" Name="MomentoInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="MomentoTermino" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Generar_Diagramas_Result">
+    <Property Type="Int64" Name="ID_Relacion" Nullable="true" />
+    <Property Type="Int64" Name="ID_Padre_Relacion" Nullable="true" />
+    <Property Type="Int64" Name="ID_CONTROL" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="true" MaxLength="150" />
+    <Property Type="Int64" Name="ID_Clasificaciones" Nullable="true" />
+    <Property Type="Int64" Name="ID" Nullable="true" />
+    <Property Type="Decimal" Name="Maximo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Stock" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="Imagen" Nullable="true" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Lote" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Leveling" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Importar_Verificar_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="true" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes_Clasificaciones" Nullable="true" />
+    <Property Type="String" Name="NoParte" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Maximo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Stock" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Proceso_Produccion_Ultimo" Nullable="true" />
+    <Property Type="Int64" Name="ID_Proceso_Produccion" Nullable="true" />
+    <Property Type="String" Name="ProductionOrder" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Leveling" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Lote" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Proceso_Embarques_Ultimo" Nullable="true" />
+    <Property Type="Int64" Name="ID_Proceso_Embarques" Nullable="true" />
+    <Property Type="String" Name="NoEmbarque" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Motivo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Produccion_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="Leveling" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OrdenProduccion" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Lote" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="DateTime" Name="MomentoInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="MomentoTermino" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Produccion_Consulta_Simple_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="Leveling" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OrdenProduccion" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Lote" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="DateTime" Name="MomentoInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="MomentoTermino" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Produccion_Consulta_TopFechaTerminoNull_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="Leveling" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="OrdenProduccion" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Lote" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="DateTime" Name="MomentoInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="MomentoTermino" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Lineas_Partes_Consulta_Detalle_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Lineas_Partes_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Lineas_Partes_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Pantallas_Lineas_Consulta_Partes_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Pantallas" Nullable="false" />
+    <Property Type="Decimal" Name="Orden" Nullable="false" Precision="3" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Pantallas_Lineas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Pantallas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="Decimal" Name="Orden" Nullable="false" Precision="3" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Pantallas_Lineas_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Pantallas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Partes_Orden_Consulta_General_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Padre" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Partes_Orden_Consulta_Recursiva_Result">
+    <Property Type="Int64" Name="ID_Relacion" Nullable="true" />
+    <Property Type="Int64" Name="ID_Padre_Relacion" Nullable="true" />
+    <Property Type="String" Name="NombreClasificacion" Nullable="false" MaxLength="500" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes_Clasificaciones" Nullable="false" />
+    <Property Type="Decimal" Name="Maximo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockActual" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="Imagen" Nullable="true" />
+    <Property Type="Decimal" Name="Demanda" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Partes_Orden_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="ID_Padre" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Usuarios_Lineas_Consulta_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Usuarios" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Relacion_Usuarios_Lineas_Insertar_renglon_Result">
+    <Property Type="Int64" Name="ID_Catalogo_Plantas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Lineas" Nullable="false" />
+    <Property Type="Int64" Name="ID_Catalogo_Usuarios" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Actualizar_Partes_Api_Result">
+    <Property Type="String" Name="NoParte" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="ID_Catalogo_Partes_Clasificaciones" Nullable="true" />
+    <Property Type="Decimal" Name="Maximo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockActual" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="Imagen" Nullable="true" />
+    <Property Type="Decimal" Name="Demanda" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Proceso_Consultar_Api_Result">
+    <Property Type="String" Name="NoParte" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="Maximo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Minimo" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockActual" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="Imagen" Nullable="true" />
+    <Property Type="Decimal" Name="Demanda" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ID_Catalogo_Estatus" Nullable="false" />
+    <Property Type="String" Name="Clasificaciones" Nullable="false" MaxLength="500" />
+  </ComplexType>
+</Schema>

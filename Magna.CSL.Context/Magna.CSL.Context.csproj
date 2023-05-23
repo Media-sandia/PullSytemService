@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB57BA6F-AB43-4BDE-88CD-EC2B69D4A446}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Magna.CSL.Context</RootNamespace>
+    <AssemblyName>Magna.CSL.Context</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="DAL\Catalogo_Configuraciones_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Correos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Correos_Etiquetas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Correos_Grupos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Correos_Grupos_Usuarios_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Correos_Grupos_Usuarios_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Estatus_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Grupos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Idiomas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Lineas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Lineas_Consulta_simple_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Lineas_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Objetos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Objetos_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Objetos_Tipos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Pantallas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Pantallas_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Partes_Clasificaciones_Consulta_General_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Partes_Clasificaciones_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Partes_Consulta_Discriminada_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Partes_Consulta_PorClasificacion_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Partes_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Periodos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Plantas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Sistemas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Tipos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Usuarios_Consulta_Detalle_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Usuarios_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Usuarios_Consulta_SinFoto_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Usuarios_Login_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Versiones_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Versiones_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Versiones_Mejoras_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Catalogo_Versiones_Mejoras_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Correos_Adjuntos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Correos_Adjuntos_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Correos_Bitacora_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Correos_Bitacora_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Correos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Correos_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Excepciones_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Excepciones_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Funcion_SepararCadena_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Actualizar_Partes_Api_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Consultar_Api_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Embarques_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Embarques_Consulta_Simple_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Embarques_Consulta_TopEstado_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Generar_Diagramas_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Importar_Verificar_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Produccion_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Produccion_Consulta_Simple_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Proceso_Produccion_Consulta_TopFechaTerminoNull_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PullSystemDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PullSystemDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PullSystemDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PullSystemDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PullSystemDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Objetos_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Objetos_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Objetos_Seleccionar_Permiso_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Objetos_Seleccionar_PorGrupo_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Objetos_Seleccionar_PorUsuario_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Objetos_Seleccionar_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Usuarios_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Usuarios_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Grupos_Usuarios_Seleccionar_PorGrupo_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Lineas_Partes_Consulta_Detalle_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Lineas_Partes_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Lineas_Partes_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Objetos_Idiomas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Objetos_Idiomas_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Pantallas_Lineas_Consulta_Partes_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Pantallas_Lineas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Pantallas_Lineas_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Partes_Orden_Consulta_General_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Partes_Orden_Consulta_Recursiva_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Partes_Orden_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Usuarios_Lineas_Consulta_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Relacion_Usuarios_Lineas_Insertar_renglon_Result.cs">
+      <DependentUpon>PullSystemDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="DAL\PullSystemDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PullSystemDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\PullSystemDbModel.edmx.diagram">
+      <DependentUpon>PullSystemDbModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\PullSystemDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PullSystemDbModel.edmx</DependentUpon>
+      <LastGenOutput>PullSystemDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\PullSystemDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PullSystemDbModel.edmx</DependentUpon>
+      <LastGenOutput>PullSystemDbModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

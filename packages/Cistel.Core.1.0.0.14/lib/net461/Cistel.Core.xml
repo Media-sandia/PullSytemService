@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cistel.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Cistel.Core.Base.Core`1">
+            <summary>
+            Clase base para lograr la ejecución de procedimientos almacenados utilizando EntityFramework como conector de datos.
+            </summary>
+            <typeparam name="TContext">Define el contexto que será utilizado para realizar la conexión con el servidor de base de datos.</typeparam>
+        </member>
+        <member name="E:Cistel.Core.Base.Core`1.PrintMessageServer">
+            <summary>
+            Evento que se ejecuta mostrando los prints recibidos por el servidor.
+            </summary>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.#ctor">
+            <summary>
+            Crea una nueva instancia de la clase base que permitirá la ejecución de procedimientos almacenados.
+            </summary>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.InvokeFunction(System.String,System.Object[])">
+            <summary>
+            Permite la invocación de funciones no genéricas.
+            </summary>
+            <param name="functionName">Nombre de la función a ejecutar.</param>
+            <param name="functionArguments">Argumentos requeridos para la ejecución de la función.</param>
+            <returns>Devuelve un objeto con el resultado de la invocación de la función.</returns>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.InvokeFunction(System.String,System.Type[],System.Object[])">
+            <summary>
+            Permite la invocación de funciones genéricas.
+            </summary>
+            <param name="functionName">Nombre de la función a ejecutar.</param>
+            <param name="genericTypes">Arreglo que requiere la función como parámetros de tipo genérico</param>
+            <param name="functionArguments">Argumentos requeridos para la ejecución de la función.</param>
+            <returns>Devuelve un objeto con el resultado de la invocación de la función.</returns>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.IsScalar(System.String)">
+            <summary>
+            Permite obtener si la función especificada es escalar.
+            </summary>
+            <param name="functionName">Nombre de la función a validar.</param>
+            <returns>Devuelve verdadero si la función especificada es escalar, de lo contrario, devuelve falso.</returns>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.GetFunctionType(System.String)">
+            <summary>
+            Permite obtener el tipo de la función especificada.
+            </summary>
+            <param name="functionName">Nombre de la función a validar.</param>
+            <returns>Devuelve el tipo devuelto de la función especificada</returns>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.GetArguments(System.String,System.Object[],System.Type,System.Boolean)">
+            <summary>
+            Permite obtener un arreglo convertido con los parámetros requeridos para la ejecución de una función
+            </summary>
+            <param name="functionName">Nombre de la función a ejecutar</param>
+            <param name="methodArgs">Argumentos que se validarán y convertirán</param>
+            <param name="outputType">Tipo de dato que será utilizado como salida de datos.</param>
+            <param name="isSelect">Define si la función ejecuta una consulta.</param>
+            <returns>Devuelve un arreglo con los parámetros requeridos para la ejecución de la función</returns>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.ExecuteProcedureIEnumerable``1(System.String,System.String,System.Boolean,System.Object[])">
+            <summary>
+            Ejecuta el procedimiento almacenado solicitado y devuelve una colección de elementos de acuerdo al tipo <typeparamref name="TOutput"/> definido.
+            </summary>
+            <typeparam name="TOutput">Tipo definido que se espera como resultado de la ejecución del procedimiento almacenado.</typeparam>
+            <param name="connectionString">Cadena de conexión que especifica la ruta del servidor.</param>
+            <param name="functionName">Nombre de la función o procedimiento almacenado a ejecutar.</param>
+            <param name="isSelect">Define si la función es parte de una consulta. De manera predeterminada, se especifica como true.</param>
+            <param name="methodArgs">Argumentos requeridos para la ejecución del procedimiento almacenado.</param>
+            <returns>Devuelve una colección de elementos de acuerdo al tipo <typeparamref name="TOutput"/> definido.</returns>
+            <exception cref="T:Cistel.Entities.Exceptions.MethodException">Si no se encuentra la función especificada, se devolverá una colección de funciones similares.</exception>
+            <exception cref="T:Cistel.Entities.Exceptions.DatabaseException">Se produce si existe algún problema de conexión al servidor.</exception>
+            <exception cref="T:Cistel.Entities.Exceptions.ArgumentCoreException">Se produce cuando el procedimiento requiere parámetros y estos no son especificados o el recuento no coincide.</exception>
+            <exception cref="T:Cistel.Entities.Exceptions.MapperException">Se produce cuando existe un problema al realizar la conversión de tipos.</exception>
+            <example>
+            <code lang="C#">
+            public class Plantas : Cistel.Core.Base.Core&lt;DAL.Context.DbContext&gt;
+            {
+                public IEnumerable&lt;Entities.Catalogos.Catalogo_Plantas&gt; Consultar(string <paramref name="connectionString"/>)
+                {
+                    var result = ExecuteProcedureIEnumerable&lt;Entities.Catalogos.Catalogo_Plantas&gt;(
+                        <paramref name="connectionString"/>, 
+                        "Catalogo_Plantas_Seleccionar", 
+                        long?(0));
+                    return result;
+                }
+            }
+            </code>
+            <code lang="VB">
+            Public Class Plantas
+                Inherits Cistel.Core.Base.Core(Of DAL.Context.DbContext)
+                
+                Public Function Consultar(ByVal connectionString As String) As IEnumerable(Of Entities.Catalogos.Catalogo_Plantas)
+                    Dim result = ExecuteProcedureIEnumerable(Of Entities.Catalogos.Catalogo_Plantas)(
+                        <paramref name="connectionString"/>, _
+                        "Catalogo_Plantas_Seleccionar", _
+                        Nullable(Of Double)(0))
+                    Return result
+                End Function
+            
+            End Class
+            </code>
+            </example>
+        </member>
+        <member name="M:Cistel.Core.Base.Core`1.ExecuteProcedure``1(System.String,System.String,System.Boolean,System.Object[])">
+            <summary>
+            Ejecuta el procedimiento almacenado solicitado y devuelve un elemento de acuerdo al tipo <typeparamref name="TOutput"/> definido.
+            </summary>
+            <typeparam name="TOutput">Tipo definido que se espera como resultado de la ejecución del procedimiento almacenado.</typeparam>
+            <param name="connectionString">Cadena de conexión que especifica la ruta del servidor.</param>
+            <param name="functionName">Nombre de la función o procedimiento almacenado a ejecutar.</param>
+            <param name="isSelect">Define si la función es parte de una consulta.</param>
+            <param name="methodArgs">Argumentos requeridos para la ejecución del procedimiento almacenado.</param>
+            <returns>Devuelve un elemento de acuerdo al tipo <typeparamref name="TOutput"/> definido</returns>
+            <exception cref="T:Cistel.Entities.Exceptions.MethodException">Si no se encuentra la función especificada, se devolverá una colección de funciones similares.</exception>
+            <exception cref="T:Cistel.Entities.Exceptions.DatabaseException">Se produce si existe algún problema de conexión al servidor.</exception>
+            <exception cref="T:Cistel.Entities.Exceptions.ArgumentCoreException">Se produce cuando el procedimiento requiere parámetros y estos no son especificados o el recuento no coincide.</exception>
+            <exception cref="T:Cistel.Entities.Exceptions.MapperException">Se produce cuando existe un problema al realizar la conversión de tipos.</exception>
+            <example>
+            <code lang="C#">
+            public class Plantas : Cistel.Core.Base.Core&lt;DAL.Context.DbContext&gt;
+            {
+                public long Insertar(string <paramref name="connectionString"/>, Entities.Catalogos.Catalogo_Plantas dataToInsert)
+                {
+                    var result = ExecuteProcedure&lt;long&gt;(
+                        <paramref name="connectionString"/>, 
+                        "Catalogo_Plantas_Insertar", 
+                        dataToInsert);
+                    return result;
+                }
+                
+                public long Actualizar(string <paramref name="connectionString"/>, Entities.Catalogos.Catalogo_Plantas dataToUpdate)
+                {
+                    var result = ExecuteProcedure&lt;long&gt;(
+                        <paramref name="connectionString"/>, 
+                        "Catalogo_Plantas_Cambiar", 
+                        dataToUpdate.ID,
+                        dataToUpdate.Nombre,
+                        dataToUpdate.ID_Catalogo_Estatus);
+                    return result;
+                }
+            }
+            </code>
+            <code lang="VB">
+            Public Class Plantas
+                Inherits Cistel.Core.Base.Core(Of DAL.Context.DbContext)
+                
+                Public Function Insertar(ByVal connectionString, ByVal dataToInsert As Entities.Catalogos.Catalogo_Plantas) as Double
+                    Dim result = ExecuteProcedure(Of Double)(
+                        <paramref name="connectionString"/>, _
+                        "Catalogo_Plantas_Insertar", _
+                        dataToInsert)
+                    Return result
+                End Function
+                
+                Public Function Actualizar(ByVal connectionString, ByVal dataToUpdate As Entities.Catalogos.Catalogo_Plantas) as Double
+                    Dim result = ExecuteProcedure(Of Double)(
+                        <paramref name="connectionString"/>, _
+                        "Catalogo_Plantas_Cambiar", _
+                        dataToUpdate.ID, _
+                        dataToUpdate.Nombre, _
+                        dataToUpdate.ID_Catalogo_Estatus)
+                    Return result
+                End Function
+            
+            End Class
+            </code>
+            </example>
+        </member>
+        <member name="T:Cistel.Core.Helpers.CoreHelper`1">
+            <summary>
+            Clase auxiliar que permite obtener información de métodos sobre una clase definida.
+            </summary>
+            <typeparam name="TClase">Clase que será utilizada como tipo base para realizar las operaciones requeridas.</typeparam>
+        </member>
+        <member name="M:Cistel.Core.Helpers.CoreHelper`1.GetMethod(System.String)">
+            <summary>
+            Obtiene una función no genérica y todos sus metadatos a partir de su nombre.
+            </summary>
+            <param name="functionName">Nombre de la función a validar.</param>
+            <returns>Devuelve los metadatos de una función definida.</returns>
+            <exception cref="T:Cistel.Entities.Exceptions.MethodException">Si no se encuentra la función especificada, se obtendrán los métodos con nombres similares.</exception>
+        </member>
+        <member name="M:Cistel.Core.Helpers.CoreHelper`1.GetMethod(System.String,System.Type[])">
+            <summary>
+            Obtiene una función genérica y todos sus metadatos a partir de su nombre.
+            </summary>
+            <param name="functionName">Nombre de la función a validar.</param>
+            <param name="types">Arreglo con los tipos que se enviarán como parámetros</param>
+            <returns>Devuelve los metadatos de una función definida.</returns>
+            /// <exception cref="T:Cistel.Entities.Exceptions.MethodException">Si no se encuentra la función especificada, se obtendrán los métodos con nombres similares.</exception>
+        </member>
+        <member name="M:Cistel.Core.Helpers.CoreHelper`1.GetSimilarMethods(System.String)">
+            <summary>
+            Obtiene un arreglo con los nombres de las funciones más similares a partir del nombre proporcionado.
+            </summary>
+            <param name="functionName">Nombre de la función a identificar.</param>
+            <returns>Devuelve un arreglo con los nombres de las funciones más similares posibles.</returns>
+        </member>
+        <member name="M:Cistel.Core.Helpers.CoreHelper`1.GetMethodType(System.String)">
+            <summary>
+            Devuelve el tipo de una función especificada.
+            </summary>
+            <param name="functionName">Nombre de la función a identificar.</param>
+            <returns>Devuelve el tipo de una función especificada.</returns>
+        </member>
+        <member name="M:Cistel.Core.Helpers.CoreHelper`1.GetUnderlyingMethodType(System.String)">
+            <summary>
+            Devuelve el tipo no nulo de una función especificada.
+            </summary>
+            <param name="functionName">Nombre de la función a identificar.</param>
+            <returns>Devuelve el tipo no nulo de una función especificada.</returns>
+        </member>
+        <member name="M:Cistel.Core.Helpers.CoreHelper`1.DictionaryFromType(System.Object)">
+            <summary>
+            Genera un diccionario con los valores que se encuentran dentro de un objeto.
+            </summary>
+            <param name="atype">Objeto del que se obtendrán las propiedades</param>
+            <returns>Devuelve un diccionario con las propiedades y valores de un objeto.</returns>
+        </member>
+        <member name="M:Cistel.Core.Helpers.CoreHelper`1.IsPrimitive(System.Type)">
+            <summary>
+            Define si un tipo definido es primitivo o completo
+            </summary>
+            <param name="type">Tipo definido a validar</param>
+            <returns>Devuelve verdadero si el tipo es primitivo, de lo contrario, devuelve falso.</returns>
+        </member>
+        <member name="M:Cistel.Core.Helpers.InternalCore`1.IsScalar(System.String)">
+            <summary>
+            Permite conocer si la función especificada es escalar o compleja.
+            </summary>
+            <param name="functionName">Nombre de la función a validar.</param>
+            <returns>Devuelve verdadero si la función es escalar, de lo contrario, devuelve falso.</returns>
+        </member>
+        <member name="M:Cistel.Core.Helpers.InternalCore`1.IsObjectResult(System.String)">
+            <summary>
+            Permite conocer si la función especificada devuelve un tipo System.Data.Entity.Core.Objects.ObjectResult
+            </summary>
+            <param name="functionName"></param>
+            <returns>Devuelve verdadero si la función devuelve un objeto de tipo System.Data.Entity.Core.Objects.ObjectResult, de lo contrario, devuelve falso.</returns>
+            <seealso cref="T:System.Data.Entity.Core.Objects.ObjectResult"/>
+        </member>
+        <member name="M:Cistel.Core.Helpers.InternalCore`1.ExecuteFunctionIEnumerable``2(System.String,System.String,System.Object[])">
+            <summary>
+            Función que ejecutará una función y esta devolverá un enumerador del tipo definido a partir de la ejecución de un procedimiento almacenado.
+            </summary>
+            <typeparam name="TResult">Tipo de resultado con el que se espera trabajar.</typeparam>
+            <typeparam name="TProcedure">Tipo de resultado que devuelve la función. Esta puede ser escalar o compleja.</typeparam>
+            <param name="connectionString">Cadena de conexión que se utilizará para ejecutar el procedimiento almacenado.</param>
+            <param name="functionName">Nombre de la función que se buscará para ejecutar.</param>
+            <param name="methodArgs">Parámetros requeridos por la función, los cuales serán enviados al procedimiento almacenado.</param>
+            <returns>Devuelve un enumerador del tipo definido (TResult) a partir de la ejecución de un procedimiento almacenado</returns>
+            <exception cref="T:Cistel.Entities.Exceptions.MapperException">Se produce cuando ocurre un error al realizar el mapeo de tipos entre el TProcedure y TResult.</exception>
+        </member>
+        <member name="M:Cistel.Core.Helpers.InternalCore`1.ExecuteFunction``2(System.String,System.String,System.Object[])">
+            <summary>
+            Función que ejecutará una función y esta devolverá un tipo definido a partir de la ejecución de un procedimiento almacenado.
+            </summary>
+            <typeparam name="TResult">Tipo de resultado con el que se espera trabajar.</typeparam>
+            <typeparam name="TProcedure">Tipo de resultado que devuelve la función. Esta puede ser escalar o compleja.</typeparam>
+            <param name="connectionString">Cadena de conexión que se utilizará para ejecutar el procedimiento almacenado.</param>
+            <param name="functionName">Nombre de la función que se buscará para ejecutar.</param>
+            <param name="methodArgs">Parámetros requeridos por la función, los cuales serán enviados al procedimiento almacenado.</param>
+            <returns>Devuelve un elemento del tipo definido (TResult) a partir de la ejecución de un procedimiento almacenado</returns>
+            <exception cref="T:Cistel.Entities.Exceptions.MapperException">Se produce cuando ocurre un error al realizar el mapeo de tipos entre el TProcedure y TResult.</exception>
+        </member>
+        <member name="T:Cistel.Core.Helpers.TinyMapperExtensions">
+            <summary>
+            Clase que define las extensiones que podrán ser utilizadas por el sistema
+            </summary>
+        </member>
+        <member name="M:Cistel.Core.Helpers.TinyMapperExtensions.Map``2(``0)">
+            <summary>
+            Permite mapear de un objeto a otro, validando que éste no exista previamente en el diccionario de mapeos.
+            </summary>
+            <typeparam name="TSource">Define el tipo de objeto origen del que se realizará el mapeo.</typeparam>
+            <typeparam name="TTarget">Define el tipo de objeto destino al cual se realizará el mapeo.</typeparam>
+            <param name="source">Define el objeto que será mapeado.</param>
+            <returns>Devuelve un elemento del tipo destino definido.</returns>
+        </member>
+    </members>
+</doc>

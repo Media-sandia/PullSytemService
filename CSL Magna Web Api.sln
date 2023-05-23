@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 DAL", "1 DAL", "{4F3E6128-3E84-4343-AAAE-E8C31B551467}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Logic", "2 Logic", "{FD9FE226-8D3B-44C7-990B-7F4A3AD88E40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Entities", "3 Entities", "{6704277C-46A4-41A6-B10D-760D8DFC4B5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Service", "4 Service", "{D02DA2D8-FECF-4BFC-9152-EB04969DF357}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.CSL.Context", "Magna.CSL.Context\Magna.CSL.Context.csproj", "{AB57BA6F-AB43-4BDE-88CD-EC2B69D4A446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.CSL.Logic", "Magna.CSL.Logic\Magna.CSL.Logic.csproj", "{98F70B24-DF92-47D5-8732-285F008A6E2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.CSL.Api", "Magna.CSL.Api\Magna.CSL.Api.csproj", "{E278F009-0B03-486E-A275-AF1457C291BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.CSL.Entities", "Magna.CSL.Entities\Magna.CSL.Entities.csproj", "{E85C7102-62E4-4882-8552-9C0A9C1A01E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB57BA6F-AB43-4BDE-88CD-EC2B69D4A446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB57BA6F-AB43-4BDE-88CD-EC2B69D4A446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB57BA6F-AB43-4BDE-88CD-EC2B69D4A446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB57BA6F-AB43-4BDE-88CD-EC2B69D4A446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F70B24-DF92-47D5-8732-285F008A6E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F70B24-DF92-47D5-8732-285F008A6E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F70B24-DF92-47D5-8732-285F008A6E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F70B24-DF92-47D5-8732-285F008A6E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E278F009-0B03-486E-A275-AF1457C291BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E278F009-0B03-486E-A275-AF1457C291BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E278F009-0B03-486E-A275-AF1457C291BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E278F009-0B03-486E-A275-AF1457C291BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85C7102-62E4-4882-8552-9C0A9C1A01E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85C7102-62E4-4882-8552-9C0A9C1A01E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85C7102-62E4-4882-8552-9C0A9C1A01E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85C7102-62E4-4882-8552-9C0A9C1A01E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB57BA6F-AB43-4BDE-88CD-EC2B69D4A446} = {4F3E6128-3E84-4343-AAAE-E8C31B551467}
+		{98F70B24-DF92-47D5-8732-285F008A6E2C} = {FD9FE226-8D3B-44C7-990B-7F4A3AD88E40}
+		{E278F009-0B03-486E-A275-AF1457C291BF} = {D02DA2D8-FECF-4BFC-9152-EB04969DF357}
+		{E85C7102-62E4-4882-8552-9C0A9C1A01E5} = {6704277C-46A4-41A6-B10D-760D8DFC4B5E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A348BF90-C4F7-44E9-B449-169A79D85B6A}
+	EndGlobalSection
+EndGlobal

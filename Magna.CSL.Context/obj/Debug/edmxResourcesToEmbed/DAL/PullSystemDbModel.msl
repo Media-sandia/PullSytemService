@@ -1,0 +1,982 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MagnaPullSystemModelStoreContainer" CdmEntityContainer="MagnaPullSystemEntities">
+    <FunctionImportMapping FunctionName="MagnaPullSystemModel.Store.Funcion_SepararCadena" FunctionImportName="Funcion_SepararCadena">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Funcion_SepararCadena_Result">
+          <ScalarProperty Name="Separados" ColumnName="Separados" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Configuraciones_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Configuraciones_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Configuraciones_Consulta_renglon_Result">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NombreMostrar" ColumnName="NombreMostrar" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="ID_Catalogo_Tipos" ColumnName="ID_Catalogo_Tipos" />
+          <ScalarProperty Name="Ocultar" ColumnName="Ocultar" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Configuraciones_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Configuraciones_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Configuraciones_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Configuraciones_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Configuraciones_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Configuraciones_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Configuraciones_Modificar_Valor" FunctionName="MagnaPullSystemModel.Store.Catalogo_Configuraciones_Modificar_Valor" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Correos_Consulta_renglon_Result">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NombreMostrar" ColumnName="NombreMostrar" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="Cuerpo" ColumnName="Cuerpo" />
+          <ScalarProperty Name="ID_Destinatarios" ColumnName="ID_Destinatarios" />
+          <ScalarProperty Name="DestinatarioSistema" ColumnName="DestinatarioSistema" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Etiquetas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Etiquetas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Correos_Etiquetas_Consulta_renglon_Result">
+          <ScalarProperty Name="Etiqueta" ColumnName="Etiqueta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Etiquetas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Etiquetas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Etiquetas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Etiquetas_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Etiquetas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Etiquetas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Correos_Grupos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="ValidarJerarquia" ColumnName="ValidarJerarquia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Usuarios_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Usuarios_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Correos_Grupos_Usuarios_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Correos_Grupos" ColumnName="ID_Catalogo_Correos_Grupos" />
+          <ScalarProperty Name="ID_Catalogo_Usuarios" ColumnName="ID_Catalogo_Usuarios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Usuarios_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Usuarios_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Usuarios_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Usuarios_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Correos_Grupos_Usuarios_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Correos_Grupos" ColumnName="ID_Catalogo_Correos_Grupos" />
+          <ScalarProperty Name="ID_Catalogo_Usuarios" ColumnName="ID_Catalogo_Usuarios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Grupos_Usuarios_Insertar_Usuarios" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Grupos_Usuarios_Insertar_Usuarios" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Correos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Correos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Estatus_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Estatus_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Estatus_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID_Catalogo_Tipos" ColumnName="ID_Catalogo_Tipos" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Vigente" ColumnName="Vigente" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Estatus_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Estatus_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Estatus_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Estatus_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Estatus_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Estatus_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Grupos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Grupos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Grupos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Grupos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Grupos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Grupos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Grupos_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Grupos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Grupos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Idiomas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Idiomas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Idiomas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NombreGlobalizado" ColumnName="NombreGlobalizado" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="Predeterminado" ColumnName="Predeterminado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Idiomas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Idiomas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Idiomas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Idiomas_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Idiomas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Idiomas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Objetos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Parent" ColumnName="ID_Parent" />
+          <ScalarProperty Name="Nombre_Interno" ColumnName="Nombre_Interno" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID_Catalogo_Objetos_Tipos" ColumnName="ID_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="href" ColumnName="href" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Objetos_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Tipos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Tipos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Objetos_Tipos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Parent" ColumnName="ID_Parent" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Namespace" ColumnName="Namespace" />
+          <ScalarProperty Name="ElementoMenu" ColumnName="ElementoMenu" />
+          <ScalarProperty Name="ControlCRUD" ColumnName="ControlCRUD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Tipos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Tipos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Tipos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Tipos_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Objetos_Tipos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Objetos_Tipos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Plantas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Plantas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Plantas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Plantas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Plantas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Plantas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Plantas_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Plantas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Plantas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Sistemas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Sistemas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Sistemas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Sistemas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Sistemas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Sistemas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Sistemas_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Sistemas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Sistemas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Tipos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Tipos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Tipos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Tipos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Tipos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Tipos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Tipos_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Tipos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Tipos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Cambiar_Contraseña" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Cambiar_Contraseña" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Cambio_Contraseña" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Cambio_Contraseña" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Consulta_CambioContraseña" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Consulta_CambioContraseña" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Consulta_Detalle" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Consulta_Detalle">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Usuarios_Consulta_Detalle_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="UrlPerfil" ColumnName="UrlPerfil" />
+          <ScalarProperty Name="CambiarContraseña" ColumnName="CambiarContraseña" />
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="NoNomina" ColumnName="NoNomina" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="Nombre_Catalogo_Lineas" ColumnName="Nombre_Catalogo_Lineas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Usuarios_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="UrlPerfil" ColumnName="UrlPerfil" />
+          <ScalarProperty Name="TokenRecuperacion" ColumnName="TokenRecuperacion" />
+          <ScalarProperty Name="CambiarContraseña" ColumnName="CambiarContraseña" />
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="NoNomina" ColumnName="NoNomina" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Consulta_SinFoto" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Consulta_SinFoto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Usuarios_Consulta_SinFoto_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="UrlPerfil" ColumnName="UrlPerfil" />
+          <ScalarProperty Name="CambiarContraseña" ColumnName="CambiarContraseña" />
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="NoNomina" ColumnName="NoNomina" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="Nombre_Catalogo_Lineas" ColumnName="Nombre_Catalogo_Lineas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Consulta_Token" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Consulta_Token" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Login" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Login">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Usuarios_Login_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Modificar_Contraseña" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Modificar_Contraseña" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Recuperar_Contraseña" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Recuperar_Contraseña" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Usuarios_Reiniciar_Contraseña" FunctionName="MagnaPullSystemModel.Store.Catalogo_Usuarios_Reiniciar_Contraseña" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Versiones_Consulta_renglon_Result">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="FechaPublicacion" ColumnName="FechaPublicacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Versiones_Insertar_renglon_Result">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Mejoras_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Mejoras_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Versiones_Mejoras_Consulta_renglon_Result">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Mejoras_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Mejoras_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Mejoras_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Mejoras_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Versiones_Mejoras_Insertar_renglon_Result">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Mejoras_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Mejoras_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Versiones_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Versiones_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Correos_Adjuntos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Adjuntos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Correos_Adjuntos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Correos" ColumnName="ID_Correos" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NombreArchivo" ColumnName="NombreArchivo" />
+          <ScalarProperty Name="RutaArchivo" ColumnName="RutaArchivo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Correos_Adjuntos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Adjuntos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Correos_Adjuntos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Adjuntos_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Correos_Adjuntos_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Correos" ColumnName="ID_Correos" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Correos_Adjuntos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Adjuntos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Correos_Bitacora_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Bitacora_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Correos_Bitacora_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Correos" ColumnName="ID_Correos" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="MensajeDevuelto" ColumnName="MensajeDevuelto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Correos_Bitacora_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Bitacora_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Correos_Bitacora_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Bitacora_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Correos_Bitacora_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Correos" ColumnName="ID_Correos" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Correos_Bitacora_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Bitacora_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Correos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Correos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="De" ColumnName="De" />
+          <ScalarProperty Name="Destinatarios" ColumnName="Destinatarios" />
+          <ScalarProperty Name="DestinatariosCC" ColumnName="DestinatariosCC" />
+          <ScalarProperty Name="DestinatariosCCO" ColumnName="DestinatariosCCO" />
+          <ScalarProperty Name="DestinatariosRespuesta" ColumnName="DestinatariosRespuesta" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="Cuerpo" ColumnName="Cuerpo" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Enviado" ColumnName="Enviado" />
+          <ScalarProperty Name="FechaEnvio" ColumnName="FechaEnvio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Correos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Correos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Correos_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Correos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Correos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_ActualizarPermisos" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_ActualizarPermisos" />
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Objetos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Grupos" ColumnName="ID_Catalogo_Grupos" />
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Objetos_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Grupos" ColumnName="ID_Catalogo_Grupos" />
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Seleccionar" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Seleccionar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_Result">
+          <ScalarProperty Name="ID_Catalogo_Grupos" ColumnName="ID_Catalogo_Grupos" />
+          <ScalarProperty Name="Nombre_Catalogo_Grupos" ColumnName="Nombre_Catalogo_Grupos" />
+          <ScalarProperty Name="Permitido" ColumnName="Permitido" />
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+          <ScalarProperty Name="ID_Parent_Catalogo_Objetos" ColumnName="ID_Parent_Catalogo_Objetos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario_Result">
+          <ScalarProperty Name="PermiteAcceso" ColumnName="PermiteAcceso" />
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Parent" ColumnName="ID_Parent" />
+          <ScalarProperty Name="Nombre_Interno" ColumnName="Nombre_Interno" />
+          <ScalarProperty Name="Nombre_Catalogo_Objetos_Tipos" ColumnName="Nombre_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="Namespace_Catalogo_Objetos_Tipos" ColumnName="Namespace_Catalogo_Objetos_Tipos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Seleccionar_Permiso" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Seleccionar_Permiso">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_Permiso_Result">
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+          <ScalarProperty Name="ID_Parent_Catalogo_Objetos" ColumnName="ID_Parent_Catalogo_Objetos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="href" ColumnName="href" />
+          <ScalarProperty Name="Nombre_Interno" ColumnName="Nombre_Interno" />
+          <ScalarProperty Name="ID_Catalogo_Objetos_Tipos" ColumnName="ID_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="Nombre_Catalogo_Objetos_Tipos" ColumnName="Nombre_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="Namespace_Catalogo_Objetos_Tipos" ColumnName="Namespace_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+          <ScalarProperty Name="Nombre_Catalogo_Objetos" ColumnName="Nombre_Catalogo_Objetos" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Seleccionar_PermisosPorUsuario" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Seleccionar_PermisosPorUsuario" />
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Seleccionar_PorGrupo" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Seleccionar_PorGrupo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_PorGrupo_Result">
+          <ScalarProperty Name="ID_Catalogo_Grupos" ColumnName="ID_Catalogo_Grupos" />
+          <ScalarProperty Name="Nombre_Catalogo_Grupos" ColumnName="Nombre_Catalogo_Grupos" />
+          <ScalarProperty Name="Permitido" ColumnName="Permitido" />
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+          <ScalarProperty Name="ID_Parent_Catalogo_Objetos" ColumnName="ID_Parent_Catalogo_Objetos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Objetos_Seleccionar_PorUsuario" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Objetos_Seleccionar_PorUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Objetos_Seleccionar_PorUsuario_Result">
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+          <ScalarProperty Name="ID_Parent_Catalogo_Objetos" ColumnName="ID_Parent_Catalogo_Objetos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="href" ColumnName="href" />
+          <ScalarProperty Name="Nombre_Interno" ColumnName="Nombre_Interno" />
+          <ScalarProperty Name="ID_Catalogo_Objetos_Tipos" ColumnName="ID_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="Nombre_Catalogo_Objetos_Tipos" ColumnName="Nombre_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="Namespace_Catalogo_Objetos_Tipos" ColumnName="Namespace_Catalogo_Objetos_Tipos" />
+          <ScalarProperty Name="Icono" ColumnName="Icono" />
+          <ScalarProperty Name="Nombre_Catalogo_Objetos" ColumnName="Nombre_Catalogo_Objetos" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Usuarios_ActualizarPermisos" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Usuarios_ActualizarPermisos" />
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Usuarios_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Usuarios_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Usuarios_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Grupos" ColumnName="ID_Catalogo_Grupos" />
+          <ScalarProperty Name="ID_Catalogo_Usuarios" ColumnName="ID_Catalogo_Usuarios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Usuarios_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Usuarios_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Usuarios_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Usuarios_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Usuarios_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Grupos" ColumnName="ID_Catalogo_Grupos" />
+          <ScalarProperty Name="ID_Catalogo_Usuarios" ColumnName="ID_Catalogo_Usuarios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Grupos_Usuarios_Seleccionar_PorGrupo" FunctionName="MagnaPullSystemModel.Store.Relacion_Grupos_Usuarios_Seleccionar_PorGrupo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Grupos_Usuarios_Seleccionar_PorGrupo_Result">
+          <ScalarProperty Name="ID_Catalogo_Grupos" ColumnName="ID_Catalogo_Grupos" />
+          <ScalarProperty Name="Nombre_Catalogo_Grupos" ColumnName="Nombre_Catalogo_Grupos" />
+          <ScalarProperty Name="Permitido" ColumnName="Permitido" />
+          <ScalarProperty Name="ID_Catalogo_Usuarios" ColumnName="ID_Catalogo_Usuarios" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Objetos_Idiomas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Objetos_Idiomas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Objetos_Idiomas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+          <ScalarProperty Name="ID_Catalogo_Idiomas" ColumnName="ID_Catalogo_Idiomas" />
+          <ScalarProperty Name="TextoMostrar" ColumnName="TextoMostrar" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Objetos_Idiomas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Objetos_Idiomas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Objetos_Idiomas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Objetos_Idiomas_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Objetos_Idiomas_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="ID_Catalogo_Objetos" ColumnName="ID_Catalogo_Objetos" />
+          <ScalarProperty Name="ID_Catalogo_Idiomas" ColumnName="ID_Catalogo_Idiomas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Objetos_Idiomas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Objetos_Idiomas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Lineas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Lineas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Lineas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Lineas_Consulta_simple" FunctionName="MagnaPullSystemModel.Store.Catalogo_Lineas_Consulta_simple">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Lineas_Consulta_simple_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Lineas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Lineas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Lineas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Lineas_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Lineas_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Lineas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Lineas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Pantallas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Pantallas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Pantallas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="DireccionIP" ColumnName="DireccionIP" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Pantallas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Pantallas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Pantallas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Pantallas_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Pantallas_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Pantallas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Pantallas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Clasificaciones_Consulta_General" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Clasificaciones_Consulta_General">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Partes_Clasificaciones_Consulta_General_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="ID_Catalogo_Partes_Clasificaciones" ColumnName="ID_Catalogo_Partes_Clasificaciones" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Clasificaciones_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Clasificaciones_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Partes_Clasificaciones_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Clasificaciones_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Clasificaciones_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Clasificaciones_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Clasificaciones_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Clasificaciones_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Clasificaciones_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Consulta_Discriminada" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Consulta_Discriminada">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Partes_Consulta_Discriminada_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID_Catalogo_Partes_Clasificaciones" ColumnName="ID_Catalogo_Partes_Clasificaciones" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Consulta_PorClasificacion" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Consulta_PorClasificacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Partes_Consulta_PorClasificacion_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID_Catalogo_Partes_Clasificaciones" ColumnName="ID_Catalogo_Partes_Clasificaciones" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Partes_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID_Catalogo_Partes_Clasificaciones" ColumnName="ID_Catalogo_Partes_Clasificaciones" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Demanda" ColumnName="Demanda" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Partes_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Partes_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Periodos_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Periodos_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Catalogo_Periodos_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaTermino" ColumnName="FechaTermino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Catalogo_Periodos_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Periodos_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Periodos_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Periodos_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Catalogo_Periodos_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Catalogo_Periodos_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Excepciones_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Excepciones_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Excepciones_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="Momento" ColumnName="Momento" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+          <ScalarProperty Name="IdSesion" ColumnName="IdSesion" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+          <ScalarProperty Name="PilaLlamadas" ColumnName="PilaLlamadas" />
+          <ScalarProperty Name="DXCallbackErrorMessage" ColumnName="DXCallbackErrorMessage" />
+          <ScalarProperty Name="aspxErrorPath" ColumnName="aspxErrorPath" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Excepciones_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Excepciones_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Excepciones_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Excepciones_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Excepciones_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Sistemas" ColumnName="ID_Catalogo_Sistemas" />
+          <ScalarProperty Name="Momento" ColumnName="Momento" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Excepciones_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Excepciones_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Proceso_Embarques_Actualizar" FunctionName="MagnaPullSystemModel.Store.Proceso_Embarques_Actualizar" />
+    <FunctionImportMapping FunctionImportName="Proceso_Embarques_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Embarques_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Embarques_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="NoEmbarque" ColumnName="NoEmbarque" />
+          <ScalarProperty Name="Surtido" ColumnName="Surtido" />
+          <ScalarProperty Name="MomentoInicio" ColumnName="MomentoInicio" />
+          <ScalarProperty Name="MomentoTermino" ColumnName="MomentoTermino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Embarques_Consulta_Simple" FunctionName="MagnaPullSystemModel.Store.Proceso_Embarques_Consulta_Simple">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Embarques_Consulta_Simple_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="NoEmbarque" ColumnName="NoEmbarque" />
+          <ScalarProperty Name="Surtido" ColumnName="Surtido" />
+          <ScalarProperty Name="MomentoInicio" ColumnName="MomentoInicio" />
+          <ScalarProperty Name="MomentoTermino" ColumnName="MomentoTermino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Embarques_Consulta_TopEstado" FunctionName="MagnaPullSystemModel.Store.Proceso_Embarques_Consulta_TopEstado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Embarques_Consulta_TopEstado_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="NoEmbarque" ColumnName="NoEmbarque" />
+          <ScalarProperty Name="Surtido" ColumnName="Surtido" />
+          <ScalarProperty Name="MomentoInicio" ColumnName="MomentoInicio" />
+          <ScalarProperty Name="MomentoTermino" ColumnName="MomentoTermino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Embarques_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Embarques_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Proceso_Embarques_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Embarques_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Proceso_Embarques_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Embarques_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Proceso_Generar_Diagramas" FunctionName="MagnaPullSystemModel.Store.Proceso_Generar_Diagramas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Generar_Diagramas_Result">
+          <ScalarProperty Name="ID_Relacion" ColumnName="ID_Relacion" />
+          <ScalarProperty Name="ID_Padre_Relacion" ColumnName="ID_Padre_Relacion" />
+          <ScalarProperty Name="ID_CONTROL" ColumnName="ID_CONTROL" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="ID_Clasificaciones" ColumnName="ID_Clasificaciones" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Leveling" ColumnName="Leveling" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Importar" FunctionName="MagnaPullSystemModel.Store.Proceso_Importar" />
+    <FunctionImportMapping FunctionImportName="Proceso_Importar_Verificar" FunctionName="MagnaPullSystemModel.Store.Proceso_Importar_Verificar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Importar_Verificar_Result">
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="ID_Catalogo_Partes_Clasificaciones" ColumnName="ID_Catalogo_Partes_Clasificaciones" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ID_Proceso_Produccion_Ultimo" ColumnName="ID_Proceso_Produccion_Ultimo" />
+          <ScalarProperty Name="ID_Proceso_Produccion" ColumnName="ID_Proceso_Produccion" />
+          <ScalarProperty Name="ProductionOrder" ColumnName="ProductionOrder" />
+          <ScalarProperty Name="Leveling" ColumnName="Leveling" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ID_Proceso_Embarques_Ultimo" ColumnName="ID_Proceso_Embarques_Ultimo" />
+          <ScalarProperty Name="ID_Proceso_Embarques" ColumnName="ID_Proceso_Embarques" />
+          <ScalarProperty Name="NoEmbarque" ColumnName="NoEmbarque" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Produccion_Actualizar" FunctionName="MagnaPullSystemModel.Store.Proceso_Produccion_Actualizar" />
+    <FunctionImportMapping FunctionImportName="Proceso_Produccion_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Produccion_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Produccion_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="Leveling" ColumnName="Leveling" />
+          <ScalarProperty Name="OrdenProduccion" ColumnName="OrdenProduccion" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="MomentoInicio" ColumnName="MomentoInicio" />
+          <ScalarProperty Name="MomentoTermino" ColumnName="MomentoTermino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Produccion_Consulta_Simple" FunctionName="MagnaPullSystemModel.Store.Proceso_Produccion_Consulta_Simple">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Produccion_Consulta_Simple_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="Leveling" ColumnName="Leveling" />
+          <ScalarProperty Name="OrdenProduccion" ColumnName="OrdenProduccion" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="MomentoInicio" ColumnName="MomentoInicio" />
+          <ScalarProperty Name="MomentoTermino" ColumnName="MomentoTermino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Produccion_Consulta_TopFechaTerminoNull" FunctionName="MagnaPullSystemModel.Store.Proceso_Produccion_Consulta_TopFechaTerminoNull">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Produccion_Consulta_TopFechaTerminoNull_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="Leveling" ColumnName="Leveling" />
+          <ScalarProperty Name="OrdenProduccion" ColumnName="OrdenProduccion" />
+          <ScalarProperty Name="Lote" ColumnName="Lote" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="MomentoInicio" ColumnName="MomentoInicio" />
+          <ScalarProperty Name="MomentoTermino" ColumnName="MomentoTermino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Produccion_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Produccion_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Proceso_Produccion_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Produccion_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Proceso_Produccion_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Proceso_Produccion_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Lineas_Partes_Consulta_Detalle" FunctionName="MagnaPullSystemModel.Store.Relacion_Lineas_Partes_Consulta_Detalle">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Lineas_Partes_Consulta_Detalle_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Lineas_Partes_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Lineas_Partes_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Lineas_Partes_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Lineas_Partes_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Lineas_Partes_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Lineas_Partes_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Lineas_Partes_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Lineas_Partes_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Pantallas_Lineas_Consulta_Partes" FunctionName="MagnaPullSystemModel.Store.Relacion_Pantallas_Lineas_Consulta_Partes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Pantallas_Lineas_Consulta_Partes_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="ID_Catalogo_Pantallas" ColumnName="ID_Catalogo_Pantallas" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Pantallas_Lineas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Pantallas_Lineas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Pantallas_Lineas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Pantallas" ColumnName="ID_Catalogo_Pantallas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Pantallas_Lineas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Pantallas_Lineas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Pantallas_Lineas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Pantallas_Lineas_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Pantallas_Lineas_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Pantallas" ColumnName="ID_Catalogo_Pantallas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Pantallas_Lineas_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Pantallas_Lineas_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Consulta_General" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Consulta_General">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Partes_Orden_Consulta_General_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Padre" ColumnName="ID_Padre" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Consulta_Recursiva" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Consulta_Recursiva">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Partes_Orden_Consulta_Recursiva_Result">
+          <ScalarProperty Name="ID_Relacion" ColumnName="ID_Relacion" />
+          <ScalarProperty Name="ID_Padre_Relacion" ColumnName="ID_Padre_Relacion" />
+          <ScalarProperty Name="NombreClasificacion" ColumnName="NombreClasificacion" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID_Catalogo_Partes_Clasificaciones" ColumnName="ID_Catalogo_Partes_Clasificaciones" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Demanda" ColumnName="Demanda" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Partes_Orden_Consulta_renglon_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_Padre" ColumnName="ID_Padre" />
+          <ScalarProperty Name="ID_Catalogo_Partes" ColumnName="ID_Catalogo_Partes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Insertar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Modificar_Recursiva" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Modificar_Recursiva" />
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Modificar_Recursivo" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Modificar_Recursivo" />
+    <FunctionImportMapping FunctionImportName="Relacion_Partes_Orden_Modificar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Partes_Orden_Modificar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Usuarios_Lineas_Consulta_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Usuarios_Lineas_Consulta_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Usuarios_Lineas_Consulta_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="ID_Catalogo_Usuarios" ColumnName="ID_Catalogo_Usuarios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Relacion_Usuarios_Lineas_Eliminar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Usuarios_Lineas_Eliminar_renglon" />
+    <FunctionImportMapping FunctionImportName="Relacion_Usuarios_Lineas_Insertar_renglon" FunctionName="MagnaPullSystemModel.Store.Relacion_Usuarios_Lineas_Insertar_renglon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Relacion_Usuarios_Lineas_Insertar_renglon_Result">
+          <ScalarProperty Name="ID_Catalogo_Plantas" ColumnName="ID_Catalogo_Plantas" />
+          <ScalarProperty Name="ID_Catalogo_Lineas" ColumnName="ID_Catalogo_Lineas" />
+          <ScalarProperty Name="ID_Catalogo_Usuarios" ColumnName="ID_Catalogo_Usuarios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Actualizar_Partes_Api" FunctionName="MagnaPullSystemModel.Store.Proceso_Actualizar_Partes_Api">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Actualizar_Partes_Api_Result">
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID_Catalogo_Partes_Clasificaciones" ColumnName="ID_Catalogo_Partes_Clasificaciones" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Demanda" ColumnName="Demanda" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proceso_Consultar_Api" FunctionName="MagnaPullSystemModel.Store.Proceso_Consultar_Api">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MagnaPullSystemModel.Proceso_Consultar_Api_Result">
+          <ScalarProperty Name="NoParte" ColumnName="NoParte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Demanda" ColumnName="Demanda" />
+          <ScalarProperty Name="ID_Catalogo_Estatus" ColumnName="ID_Catalogo_Estatus" />
+          <ScalarProperty Name="Clasificaciones" ColumnName="Clasificaciones" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,991 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MagnaPullSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="Catalogo_Configuraciones_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreMostrar" Type="varchar" Mode="In" />
+    <Parameter Name="Valor" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Tipos" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Configuraciones_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Configuraciones_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreMostrar" Type="varchar" Mode="In" />
+    <Parameter Name="Valor" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="Ocultar" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Configuraciones_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreMostrar" Type="varchar" Mode="In" />
+    <Parameter Name="Valor" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="Ocultar" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Configuraciones_Modificar_Valor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Valor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreMostrar" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Cuerpo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ID_Destinatarios" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Etiquetas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Etiqueta" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="Texto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Etiquetas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Etiqueta" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Etiquetas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Etiqueta" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="Texto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Etiquetas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Etiqueta" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="Texto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="ValidarJerarquia" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="ValidarJerarquia" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Usuarios_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Correos_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Usuarios_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Correos_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Usuarios_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Correos_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Grupos_Usuarios_Insertar_Usuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Correos_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="IDs_Catalogo_Usuarios" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreMostrar" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Cuerpo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ID_Destinatarios" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatarioSistema" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Correos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreMostrar" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Cuerpo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ID_Destinatarios" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatarioSistema" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Estatus_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Estatus_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Estatus_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+    <Parameter Name="Color" Type="varchar" Mode="In" />
+    <Parameter Name="Vigente" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Estatus_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+    <Parameter Name="Color" Type="varchar" Mode="In" />
+    <Parameter Name="Vigente" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Grupos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Grupos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Grupos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Grupos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Idiomas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreGlobalizado" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Idiomas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Idiomas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreGlobalizado" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="Predeterminado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Idiomas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="NombreGlobalizado" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="Predeterminado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Parent" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre_Interno" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="href" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Parent" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre_Interno" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="href" Type="varchar" Mode="In" />
+    <Parameter Name="Icono" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Parent" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre_Interno" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos_Tipos" Type="bigint" Mode="In" />
+    <Parameter Name="href" Type="varchar" Mode="In" />
+    <Parameter Name="Icono" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Tipos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Parent" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Namespace" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Tipos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Tipos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Parent" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Namespace" Type="varchar" Mode="In" />
+    <Parameter Name="ElementoMenu" Type="bit" Mode="In" />
+    <Parameter Name="ControlCRUD" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Objetos_Tipos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Parent" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Namespace" Type="varchar" Mode="In" />
+    <Parameter Name="ElementoMenu" Type="bit" Mode="In" />
+    <Parameter Name="ControlCRUD" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Plantas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Plantas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Plantas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Logo" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Plantas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Logo" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Sistemas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Sistemas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Sistemas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Sistemas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Tipos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Tipos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Tipos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Tipos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Cambiar_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="TokenRecuperacion" Type="varchar" Mode="In" />
+    <Parameter Name="Contraseña" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ConfirmacionContraseña" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Cambio_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ContraseñaAnterior" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Contraseña" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ConfirmacionContraseña" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Consulta_CambioContraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Consulta_Detalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="CorreoElectronico" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Consulta_SinFoto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="CorreoElectronico" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Consulta_Token" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="TokenRecuperacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="CorreoElectronico" Type="varchar" Mode="In" />
+    <Parameter Name="Contraseña" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="UrlPerfil" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="TokenRecuperacion" Type="varchar" Mode="In" />
+    <Parameter Name="CambiarContraseña" Type="bit" Mode="In" />
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="NoNomina" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="UsuarioCorreoElectronico" Type="varchar" Mode="In" />
+    <Parameter Name="Contraseña" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Modificar_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="IdUsuario" Type="bigint" Mode="In" />
+    <Parameter Name="Contraseña" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ConfirmacionContraseña" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="CorreoElectronico" Type="varchar" Mode="In" />
+    <Parameter Name="Contraseña" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="UrlPerfil" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="TokenRecuperacion" Type="varchar" Mode="In" />
+    <Parameter Name="CambiarContraseña" Type="bit" Mode="In" />
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="NoNomina" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Recuperar_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="CorreoElectronico" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Usuarios_Reiniciar_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ContraseñaNueva" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="FechaPublicacion" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="FechaPublicacion" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Mejoras_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Numero" Type="decimal" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Mejoras_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Numero" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Mejoras_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Numero" Type="decimal" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Mejoras_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Numero" Type="decimal" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Versiones_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Version" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="FechaPublicacion" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Correos_Adjuntos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="NombreArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="RutaArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Correos_Adjuntos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Correos_Adjuntos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="NombreArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="RutaArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Correos_Adjuntos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="NombreArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="RutaArchivo" Type="varchar" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Correos_Bitacora_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+    <Parameter Name="MensajeDevuelto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Correos_Bitacora_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Correos_Bitacora_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+    <Parameter Name="MensajeDevuelto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Correos_Bitacora_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Correos" Type="bigint" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+    <Parameter Name="MensajeDevuelto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Correos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="De" Type="varchar" Mode="In" />
+    <Parameter Name="Destinatarios" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Cuerpo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Correos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Correos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="De" Type="varchar" Mode="In" />
+    <Parameter Name="Destinatarios" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatariosCC" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatariosCCO" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatariosRespuesta" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Cuerpo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+    <Parameter Name="Enviado" Type="bit" Mode="In" />
+    <Parameter Name="FechaEnvio" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Correos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="De" Type="varchar" Mode="In" />
+    <Parameter Name="Destinatarios" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatariosCC" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatariosCCO" Type="varchar" Mode="In" />
+    <Parameter Name="DestinatariosRespuesta" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Cuerpo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+    <Parameter Name="Enviado" Type="bit" Mode="In" />
+    <Parameter Name="FechaEnvio" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Funcion_SepararCadena" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="String" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Separator" Type="char" Mode="In" />
+    <Parameter Name="Count" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Separados" Type="varchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="ObtenerConfiguracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis" ReturnType="varchar">
+    <Parameter Name="NombreConfiguracion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_ActualizarPermisos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Xml" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Seleccionar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Seleccionar_AccesosPorUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+    <Parameter Name="href" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Seleccionar_Permiso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+    <Parameter Name="Href" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Seleccionar_PermisosPorUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+    <Parameter Name="href" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Seleccionar_PorGrupo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Objetos_Seleccionar_PorUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Usuarios_ActualizarPermisos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="Xml" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Usuarios_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Usuarios_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Usuarios_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Grupos_Usuarios_Seleccionar_PorGrupo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Grupos" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Objetos_Idiomas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Idiomas" Type="bigint" Mode="In" />
+    <Parameter Name="TextoMostrar" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Objetos_Idiomas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Idiomas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Objetos_Idiomas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Idiomas" Type="bigint" Mode="In" />
+    <Parameter Name="TextoMostrar" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Objetos_Idiomas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="cis">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Objetos" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Idiomas" Type="bigint" Mode="In" />
+    <Parameter Name="TextoMostrar" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Lineas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Lineas_Consulta_simple" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Lineas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Lineas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Lineas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Pantallas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionIP" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Pantallas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Pantallas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionIP" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Pantallas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionIP" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Clasificaciones_Consulta_General" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Clasificaciones_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Clasificaciones_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Clasificaciones_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Clasificaciones_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Orden" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Consulta_Discriminada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PalabraConfiguracionDiscriminatoria" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Consulta_PorClasificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PalabraConfiguracionDiscriminatoria" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="NoParte" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes_Clasificaciones" Type="bigint" Mode="In" />
+    <Parameter Name="Maximo" Type="decimal" Mode="In" />
+    <Parameter Name="Minimo" Type="decimal" Mode="In" />
+    <Parameter Name="StockActual" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="NoParte" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes_Clasificaciones" Type="bigint" Mode="In" />
+    <Parameter Name="Maximo" Type="decimal" Mode="In" />
+    <Parameter Name="Minimo" Type="decimal" Mode="In" />
+    <Parameter Name="StockActual" Type="decimal" Mode="In" />
+    <Parameter Name="Imagen" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Demanda" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Partes_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="NoParte" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes_Clasificaciones" Type="bigint" Mode="In" />
+    <Parameter Name="Maximo" Type="decimal" Mode="In" />
+    <Parameter Name="Minimo" Type="decimal" Mode="In" />
+    <Parameter Name="StockActual" Type="decimal" Mode="In" />
+    <Parameter Name="Imagen" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Demanda" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Periodos_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="FechaInicio" Type="date" Mode="In" />
+    <Parameter Name="FechaTermino" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Periodos_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Periodos_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="FechaInicio" Type="date" Mode="In" />
+    <Parameter Name="FechaTermino" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Catalogo_Periodos_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="FechaInicio" Type="date" Mode="In" />
+    <Parameter Name="FechaTermino" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Excepciones_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Momento" Type="datetime" Mode="In" />
+    <Parameter Name="Identificador" Type="varchar" Mode="In" />
+    <Parameter Name="IdSesion" Type="varchar" Mode="In" />
+    <Parameter Name="Mensaje" Type="varchar(max)" Mode="In" />
+    <Parameter Name="PilaLlamadas" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Excepciones_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Momento" Type="datetime" Mode="In" />
+    <Parameter Name="Identificador" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Excepciones_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Momento" Type="datetime" Mode="In" />
+    <Parameter Name="Identificador" Type="varchar" Mode="In" />
+    <Parameter Name="IdSesion" Type="varchar" Mode="In" />
+    <Parameter Name="Mensaje" Type="varchar(max)" Mode="In" />
+    <Parameter Name="PilaLlamadas" Type="varchar(max)" Mode="In" />
+    <Parameter Name="DXCallbackErrorMessage" Type="varchar(max)" Mode="In" />
+    <Parameter Name="aspxErrorPath" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Usuario" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Excepciones_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Sistemas" Type="bigint" Mode="In" />
+    <Parameter Name="Momento" Type="datetime" Mode="In" />
+    <Parameter Name="Identificador" Type="varchar" Mode="In" />
+    <Parameter Name="IdSesion" Type="varchar" Mode="In" />
+    <Parameter Name="Mensaje" Type="varchar(max)" Mode="In" />
+    <Parameter Name="PilaLlamadas" Type="varchar(max)" Mode="In" />
+    <Parameter Name="DXCallbackErrorMessage" Type="varchar(max)" Mode="In" />
+    <Parameter Name="aspxErrorPath" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Usuario" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetHash" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
+  <Function Name="Proceso_Actualizar_Partes_Api" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="xml" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Consultar_Api" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Proceso_Embarques_Actualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="NoEmbarque" Type="varchar" Mode="In" />
+    <Parameter Name="Surtido" Type="bit" Mode="In" />
+    <Parameter Name="MomentoTermino" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Embarques_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="NoEmbarque" Type="varchar" Mode="In" />
+    <Parameter Name="MomentoInicio" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Embarques_Consulta_Simple" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Embarques_Consulta_TopEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Embarques_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Embarques_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="NoEmbarque" Type="varchar" Mode="In" />
+    <Parameter Name="Surtido" Type="bit" Mode="In" />
+    <Parameter Name="MomentoInicio" Type="datetime" Mode="In" />
+    <Parameter Name="MomentoTermino" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Embarques_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="NoEmbarque" Type="varchar" Mode="In" />
+    <Parameter Name="Surtido" Type="bit" Mode="In" />
+    <Parameter Name="MomentoTermino" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Generar_Diagramas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Importar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Xml" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Importar_Verificar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Xml" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Produccion_Actualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="Leveling" Type="varchar" Mode="In" />
+    <Parameter Name="OrdenProduccion" Type="varchar" Mode="In" />
+    <Parameter Name="Lote" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="MomentoTermino" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Produccion_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="OrdenProduccion" Type="varchar" Mode="In" />
+    <Parameter Name="Lote" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="MomentoInicio" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Produccion_Consulta_Simple" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Produccion_Consulta_TopFechaTerminoNull" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Produccion_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Produccion_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="Leveling" Type="varchar" Mode="In" />
+    <Parameter Name="OrdenProduccion" Type="varchar" Mode="In" />
+    <Parameter Name="Lote" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="MomentoInicio" Type="datetime" Mode="In" />
+    <Parameter Name="MomentoTermino" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Proceso_Produccion_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+    <Parameter Name="Leveling" Type="varchar" Mode="In" />
+    <Parameter Name="OrdenProduccion" Type="varchar" Mode="In" />
+    <Parameter Name="Lote" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Catalogo_Estatus" Type="bigint" Mode="In" />
+    <Parameter Name="MomentoInicio" Type="datetime" Mode="In" />
+    <Parameter Name="MomentoTermino" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Lineas_Partes_Consulta_Detalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Lineas_Partes_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Lineas_Partes_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Lineas_Partes_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Pantallas_Lineas_Consulta_Partes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DireccionIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Pantallas_Lineas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Pantallas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="Orden" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Pantallas_Lineas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Pantallas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Pantallas_Lineas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Pantallas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="Orden" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Pantallas_Lineas_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Pantallas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="Orden" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Consulta_General" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Padre" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Consulta_Recursiva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Padre" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Padre" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Modificar_Recursiva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Relacion" Type="bigint" Mode="In" />
+    <Parameter Name="NoParte" Type="varchar" Mode="In" />
+    <Parameter Name="Maximo" Type="decimal" Mode="In" />
+    <Parameter Name="Minimo" Type="decimal" Mode="In" />
+    <Parameter Name="StockActual" Type="decimal" Mode="In" />
+    <Parameter Name="NombreClasificacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Modificar_Recursivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="Maximo" Type="decimal" Mode="In" />
+    <Parameter Name="Minimo" Type="decimal" Mode="In" />
+    <Parameter Name="StockActual" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Partes_Orden_Modificar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Padre" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Partes" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Usuarios_Lineas_Consulta_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Usuarios_Lineas_Eliminar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Relacion_Usuarios_Lineas_Insertar_renglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Catalogo_Plantas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Lineas" Type="bigint" Mode="In" />
+    <Parameter Name="ID_Catalogo_Usuarios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="ToTicks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bigint">
+    <Parameter Name="DateTime" Type="datetime2" Mode="In" />
+  </Function>
+  <EntityContainer Name="MagnaPullSystemModelStoreContainer" />
+</Schema>
